@@ -7,9 +7,9 @@ namespace EvalBack.Functions
 {
     public class Function
     {
-        private readonly ILogger<Function1> _logger;
+        private readonly ILogger<Function> _logger;
 
-        public Function(ILogger<Function1> logger)
+        public Function(ILogger<Function> logger)
         {
             _logger = logger;
         }
