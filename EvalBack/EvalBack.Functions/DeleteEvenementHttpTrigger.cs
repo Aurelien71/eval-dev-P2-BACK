@@ -20,20 +20,12 @@ namespace EvalBack.Functions
         }
 
         [Function(nameof(DeleteEvenementHttpTrigger))]
-        public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Function, "delete")] HttpRequestData req)
+        public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "DeleteEvenementHttpTrigger/{id:guid}")] HttpRequestData req,
+            Guid id)
         {
             try
             {
-                var evenement = await req.ReadFromJsonAsync<Evenement>();
-
-                if (evenement is null)
-                {
-                    _logger.LogDebug("Invalid request body");
-
-                    return req.CreateResponse(HttpStatusCode.BadRequest);
-                }
-
-                await _evenementService.DeleteEvenement(evenement);
+                await _evenementService.DeleteEvenement(id);
 
                 return req.CreateResponse(HttpStatusCode.OK);
             }

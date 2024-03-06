@@ -33,7 +33,7 @@ namespace EvalBack.Functions
                     return req.CreateResponse(HttpStatusCode.BadRequest);
                 }
 
-                var evenements = _evenementService.EditEvenement(evenement);
+                var evenements = await _evenementService.EditEvenement(evenement);
 
                 var response = req.CreateResponse(HttpStatusCode.OK);
 

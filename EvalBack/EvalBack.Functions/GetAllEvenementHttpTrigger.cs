@@ -24,7 +24,7 @@ namespace EvalBack.Functions
             try
             {
 
-                var evenements = _evenementService.GetAllEvenements();
+                var evenements = await _evenementService.GetAllEvenements();
 
                 var response = req.CreateResponse(HttpStatusCode.OK);
 

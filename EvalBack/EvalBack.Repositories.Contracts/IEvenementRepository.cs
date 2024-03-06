@@ -6,6 +6,6 @@ namespace EvalBack.Repositories.Contracts
         Task AddEvenement(Evenement evenement);
         Task<IEnumerable<Evenement>> GetAllEvenements();
         Task<Evenement> EditEvent(Evenement evenement);
-        Task DeleteEvenement(Evenement evenement);
+        Task DeleteEvenement(Guid id);
     }
 }

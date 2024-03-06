@@ -16,9 +16,9 @@ namespace EvalBack.Service
             await _evenementRepository.AddEvenement(evenement);
         }
 
-        public async Task DeleteEvenement(Evenement evenement)
+        public async Task DeleteEvenement(Guid id)
         {
-            await _evenementRepository.DeleteEvenement(evenement);
+            await _evenementRepository.DeleteEvenement(id);
         }
 
         public async Task<Evenement> EditEvenement(Evenement evenement)
