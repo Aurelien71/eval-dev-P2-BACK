@@ -24,5 +24,10 @@ namespace EvalBack.Service
 
             await _evenementRepository.AddEvenement(evenementDb);
         }
+
+        public async Task<IEnumerable<Evenement>> GetAllEvenements()
+        {
+            return await _evenementRepository.GetAllEvenements();
+        }
     }
 }

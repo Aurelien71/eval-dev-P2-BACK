@@ -1,6 +1,7 @@
 ﻿using EvalBack.Context;
 using EvalBack.Entities;
 using EvalBack.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace EvalBack.Repositories
 {
@@ -16,6 +17,11 @@ namespace EvalBack.Repositories
         {
             await Context.Evenements.AddAsync(evenement);
             await Context.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Evenement>> GetAllEvenements()
+        {
+            return await Context.Evenements.ToListAsync();
         }
     }
 }

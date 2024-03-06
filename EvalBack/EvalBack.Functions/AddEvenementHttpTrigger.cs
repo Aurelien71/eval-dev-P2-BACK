@@ -39,7 +39,7 @@ namespace EvalBack.Functions
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Internal server errorwhile adding user in application");
+                _logger.LogError(e, "Internal server error");
 
                 return req.CreateResponse(HttpStatusCode.InternalServerError);
             }

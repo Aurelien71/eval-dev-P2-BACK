@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Repositories.Contr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Entities", "EvalBack.Entities\EvalBack.Entities.csproj", "{D6326030-56A9-4581-96D1-DB35BBCF5ECE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Context", "EvalBack.Context\EvalBack.Context.csproj", "{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Context", "EvalBack.Context\EvalBack.Context.csproj", "{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
