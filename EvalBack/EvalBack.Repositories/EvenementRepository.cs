@@ -19,6 +19,15 @@ namespace EvalBack.Repositories
             await Context.SaveChangesAsync();
         }
 
+        public async Task<Evenement> EditEvent(Evenement evenement)
+        {
+            var result = Context.Evenements.Update(evenement);
+
+            await Context.SaveChangesAsync();
+
+            return result.Entity;
+        }
+
         public async Task<IEnumerable<Evenement>> GetAllEvenements()
         {
             return await Context.Evenements.ToListAsync();

@@ -5,5 +5,6 @@ namespace EvalBack.Repositories.Contracts
     {
         Task AddEvenement(Evenement evenement);
         Task<IEnumerable<Evenement>> GetAllEvenements();
+        Task<Evenement> EditEvent(Evenement evenement);
     }
 }

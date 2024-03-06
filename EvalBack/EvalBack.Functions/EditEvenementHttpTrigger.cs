@@ -8,19 +8,19 @@ using System.Net;
 
 namespace EvalBack.Functions
 {
-    public class AddEvenementHttpTrigger
+    public class EditEvenementHttpTrigger
     {
-        private readonly ILogger<AddEvenementHttpTrigger> _logger;
+        private readonly ILogger<EditEvenementHttpTrigger> _logger;
         private readonly IEvenementService _evenementService;
 
-        public AddEvenementHttpTrigger(ILogger<AddEvenementHttpTrigger> logger, IEvenementService evenementService)
+        public EditEvenementHttpTrigger(ILogger<EditEvenementHttpTrigger> logger, IEvenementService evenementService)
         {
             _logger = logger;
             _evenementService = evenementService;
         }
 
-        [Function(nameof(AddEvenementHttpTrigger))]
-        public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequestData req)
+        [Function(nameof(EditEvenementHttpTrigger))]
+        public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Function, "put")] HttpRequestData req)
         {
             try
             {
@@ -33,9 +33,13 @@ namespace EvalBack.Functions
                     return req.CreateResponse(HttpStatusCode.BadRequest);
                 }
 
-                await _evenementService.AddEvenement(evenement);
+                var evenements = _evenementService.EditEvenement(evenement);
 
-                return req.CreateResponse(HttpStatusCode.OK);
+                var response = req.CreateResponse(HttpStatusCode.OK);
+
+                await response.WriteAsJsonAsync(evenements);
+
+                return response;
             }
             catch (Exception e)
             {

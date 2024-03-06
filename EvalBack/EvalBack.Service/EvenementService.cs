@@ -12,22 +12,20 @@ namespace EvalBack.Service
         {
             _evenementRepository = evenementRepository;
         }
-        public async Task AddEvenement(EvenementDTO evenement)
+        public async Task AddEvenement(Evenement evenement)
         {
-            Evenement evenementDb = new Evenement()
-            {
-                Description = evenement.Description,
-                Heure = evenement.Heure,
-                Lieu = evenement.Lieu,
-                Titre = evenement.Titre,
-            };
+            await _evenementRepository.AddEvenement(evenement);
+        }
 
-            await _evenementRepository.AddEvenement(evenementDb);
+        public async Task<Evenement> EditEvenement(Evenement evenement)
+        {
+            return await _evenementRepository.EditEvent(evenement);
         }
 
         public async Task<IEnumerable<Evenement>> GetAllEvenements()
         {
             return await _evenementRepository.GetAllEvenements();
         }
+
     }
 }
