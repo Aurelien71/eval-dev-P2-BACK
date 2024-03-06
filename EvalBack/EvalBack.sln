@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Functions", "EvalBack.Functions\EvalBack.Functions.csproj", "{31E89151-BAA9-4AED-B95C-90E467233E83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Functions", "EvalBack.Functions\EvalBack.Functions.csproj", "{31E89151-BAA9-4AED-B95C-90E467233E83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Service", "EvalBack.Service\EvalBack.Service.csproj", "{83E8EC1C-80B3-4D07-9689-35D4775EF28F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Service", "EvalBack.Service\EvalBack.Service.csproj", "{83E8EC1C-80B3-4D07-9689-35D4775EF28F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Services.Contracts", "EvalBack.Services.Contracts\EvalBack.Services.Contracts.csproj", "{F7DC7956-18A4-4F87-A166-B78313B28E29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Services.Contracts", "EvalBack.Services.Contracts\EvalBack.Services.Contracts.csproj", "{F7DC7956-18A4-4F87-A166-B78313B28E29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Repositories", "EvalBack.Repositories\EvalBack.Repositories.csproj", "{C84677AF-7256-4E19-9177-B18C196EC853}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Repositories", "EvalBack.Repositories\EvalBack.Repositories.csproj", "{C84677AF-7256-4E19-9177-B18C196EC853}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Repositories.Contracts", "EvalBack.Repositories.Contracts\EvalBack.Repositories.Contracts.csproj", "{B3FAA0A5-3788-4F48-B1C4-A5ABC809E27C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Repositories.Contracts", "EvalBack.Repositories.Contracts\EvalBack.Repositories.Contracts.csproj", "{B3FAA0A5-3788-4F48-B1C4-A5ABC809E27C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Entities", "EvalBack.Entities\EvalBack.Entities.csproj", "{D6326030-56A9-4581-96D1-DB35BBCF5ECE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvalBack.Entities", "EvalBack.Entities\EvalBack.Entities.csproj", "{D6326030-56A9-4581-96D1-DB35BBCF5ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvalBack.Context", "EvalBack.Context\EvalBack.Context.csproj", "{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D6326030-56A9-4581-96D1-DB35BBCF5ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6326030-56A9-4581-96D1-DB35BBCF5ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6326030-56A9-4581-96D1-DB35BBCF5ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8BEE03D-5BE2-48AA-B9CD-C529879C622B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

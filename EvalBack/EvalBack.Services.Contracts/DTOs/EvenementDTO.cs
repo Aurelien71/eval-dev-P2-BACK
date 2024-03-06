@@ -1,14 +1,10 @@
-﻿namespace EvalBack.Entities
+﻿namespace EvalBack.Services.Contracts.DTOs
 {
     /// <summary>
     /// Classe représentant un évènement.
     /// </summary>
-    public class Evenement
+    public class EvenementDTO
     {
-        /// <summary>
-        /// Idenfiant de l'évènement.
-        /// </summary>
-        public Guid Id { get; set; }
         /// <summary>
         /// Titre de l'évènement.
         /// </summary>

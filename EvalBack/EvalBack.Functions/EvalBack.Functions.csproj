@@ -14,6 +14,18 @@
     <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.16.4" />
     <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.21.0" />
     <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvalBack.Context\EvalBack.Context.csproj" />
+    <ProjectReference Include="..\EvalBack.Repositories.Contracts\EvalBack.Repositories.Contracts.csproj" />
+    <ProjectReference Include="..\EvalBack.Repositories\EvalBack.Repositories.csproj" />
+    <ProjectReference Include="..\EvalBack.Services.Contracts\EvalBack.Services.Contracts.csproj" />
+    <ProjectReference Include="..\EvalBack.Service\EvalBack.Service.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
