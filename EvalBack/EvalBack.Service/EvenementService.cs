@@ -1,7 +1,6 @@
 ﻿using EvalBack.Entities;
 using EvalBack.Repositories.Contracts;
 using EvalBack.Services.Contracts;
-using EvalBack.Services.Contracts.DTOs;
 
 namespace EvalBack.Service
 {
@@ -15,6 +14,11 @@ namespace EvalBack.Service
         public async Task AddEvenement(Evenement evenement)
         {
             await _evenementRepository.AddEvenement(evenement);
+        }
+
+        public async Task DeleteEvenement(Evenement evenement)
+        {
+            await _evenementRepository.DeleteEvenement(evenement);
         }
 
         public async Task<Evenement> EditEvenement(Evenement evenement)

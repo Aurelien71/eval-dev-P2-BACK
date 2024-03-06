@@ -19,6 +19,12 @@ namespace EvalBack.Repositories
             await Context.SaveChangesAsync();
         }
 
+        public async Task DeleteEvenement(Evenement evenement)
+        {
+            Context.Evenements.Remove(evenement);
+            await Context.SaveChangesAsync();
+        }
+
         public async Task<Evenement> EditEvent(Evenement evenement)
         {
             var result = Context.Evenements.Update(evenement);
